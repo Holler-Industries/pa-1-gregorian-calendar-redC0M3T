@@ -8,7 +8,7 @@ public class CalendarTester {
 
 
         //This constructs a GregorianCalendar object
-        GregorianCalendar myCal = new GregorianCalendar();
+        GregorianCalendar myCal = new GregorianCalendar(2020, Calendar.SEPTEMBER, 25 );
 
 
         /* You can use constants with the GregorianCalendar class to refer to its various
@@ -30,8 +30,43 @@ public class CalendarTester {
         int dayOfMonth = myCal.get(Calendar.DAY_OF_MONTH);
         int dayOfWeek;
 
-        System.out.println("The current date is: " + month + "/" + dayOfMonth + "/" + year);
-        System.out.println("Expected: 9/25/2020");
+        if (month == 1)
+        { System.out.println("The current date is: January/" + dayOfMonth + "/" + year); }
+
+        else if (month == 2)
+        { System.out.println("The current date is: February/" + dayOfMonth + "/" + year); }
+
+        else if (month == 3)
+        { System.out.println("The current date is: March/" + dayOfMonth + "/" + year); }
+
+        else if (month == 4)
+        { System.out.println("The current date is: April/" + dayOfMonth + "/" + year); }
+
+        else if (month == 5)
+        { System.out.println("The current date is: May/" + dayOfMonth + "/" + year); }
+
+        else if (month == 6)
+        { System.out.println("The current date is: June/" + dayOfMonth + "/" + year); }
+
+        else if (month == 7)
+        { System.out.println("The current date is: July/" + dayOfMonth + "/" + year); }
+
+        else if (month == 8)
+        { System.out.println("The current date is: August/" + dayOfMonth + "/" + year); }
+
+        else if (month == 9)
+        { System.out.println("The current date is: September/" + dayOfMonth + "/" + year); }
+
+        else if (month == 10)
+        { System.out.println("The current date is: October/" + dayOfMonth + "/" + year); }
+
+        else if (month == 11)
+        { System.out.println("The current date is: November/" + dayOfMonth + "/" + year); }
+
+        else
+        { System.out.println("The current date is: December/" + dayOfMonth + "/" + year); }
+
+        System.out.println("Expected: September/25/2020");
 
 
         //Call the .add method to add 100 days to myCal.  Then, check the date and weekday of this new date.
@@ -41,22 +76,57 @@ public class CalendarTester {
         year = myCal.get(Calendar.YEAR);
         month = myCal.get(Calendar.MONTH) + 1;
         dayOfMonth = myCal.get(Calendar.DAY_OF_MONTH);
-        System.out.println("100 days from today is: " + month + "/" + dayOfMonth + "/" + year);
-        System.out.println("Expected: 1/3/2020");
 
-        year = year - 1;
-        myCal.add(Calendar.DAY_OF_MONTH,63);
-        month = myCal.get(Calendar.MONTH) + 1;
-        dayOfMonth = myCal.get(Calendar.DAY_OF_MONTH);
-        dayOfWeek = myCal.get(Calendar.DAY_OF_WEEK) + 6;
-        System.out.println("My birthday in 2020 is: " + month + "/" + dayOfMonth + "/" + year);
+        if (month == 1)
+        { System.out.println("The current date is: January/" + dayOfMonth + "/" + year); }
+
+        else if (month == 2)
+        { System.out.println("The current date is: February/" + dayOfMonth + "/" + year); }
+
+        else if (month == 3)
+        { System.out.println("The current date is: March/" + dayOfMonth + "/" + year); }
+
+        else if (month == 4)
+        { System.out.println("The current date is: April/" + dayOfMonth + "/" + year); }
+
+        else if (month == 5)
+        { System.out.println("The current date is: May/" + dayOfMonth + "/" + year); }
+
+        else if (month == 6)
+        { System.out.println("The current date is: June/" + dayOfMonth + "/" + year); }
+
+        else if (month == 7)
+        { System.out.println("The current date is: July/" + dayOfMonth + "/" + year); }
+
+        else if (month == 8)
+        { System.out.println("The current date is: August/" + dayOfMonth + "/" + year); }
+
+        else if (month == 9)
+        { System.out.println("The current date is: September/" + dayOfMonth + "/" + year); }
+
+        else if (month == 10)
+        { System.out.println("The current date is: October/" + dayOfMonth + "/" + year); }
+
+        else if (month == 11)
+        { System.out.println("The current date is: November/" + dayOfMonth + "/" + year); }
+
+        else
+        { System.out.println("The current date is: December/" + dayOfMonth + "/" + year); }
+
+        System.out.println("Expected: January/3/2021");
+
+
+        myCal = new GregorianCalendar(2020, Calendar.MARCH, 7 );
+
+        dayOfWeek = myCal.get(Calendar.DAY_OF_WEEK);
+        System.out.println("My birthday in 2020 is: March/7");
         System.out.println("The weekday of my 2020 birthday is: " + dayOfWeek);
 
 
         //Finally, find what day of the week is 10,000 days after your 2020 birthday. Note, you may have to play around
         //with adding or subtracting days to get to your birthday date (hmm, how can you subtract days?)
         myCal.add(Calendar.DAY_OF_MONTH,10000);
-        dayOfWeek = myCal.get(Calendar.DAY_OF_WEEK) - 1;
+        dayOfWeek = myCal.get(Calendar.DAY_OF_WEEK);
         System.out.println("The weekday of 10,000 days after my 2020 birthday is: " + dayOfWeek);
 
 
