@@ -48,7 +48,7 @@ public class CalendarTester {
         myCal.add(Calendar.DAY_OF_MONTH,63);
         month = myCal.get(Calendar.MONTH) + 1;
         dayOfMonth = myCal.get(Calendar.DAY_OF_MONTH);
-        dayOfWeek = myCal.get(Calendar.DAY_OF_WEEK) - 1;
+        dayOfWeek = myCal.get(Calendar.DAY_OF_WEEK) + 6;
         System.out.println("My birthday in 2020 is: " + month + "/" + dayOfMonth + "/" + year);
         System.out.println("The weekday of my 2020 birthday is: " + dayOfWeek);
 
